@@ -27,7 +27,7 @@ complex operator*(complex &c)
 {
  complex temp;
    temp.r= (r*c.r) - (i*c.i);
-   temp.i = (i*c.i) + (r*c.r);
+   temp.i = (r*c.i) + (i*c.r);
    return temp;   
 }
 friend istream & operator>>(istream &in,complex &c);
@@ -43,8 +43,8 @@ in>>c.r>>c.i;
 }
 ostream & operator<<(ostream &out,complex &c)
 {
-   out<<" the real and imaginary part : "<<endl;
-cout<<c.r<<"   "<<c.i <<"i"<<endl;
+   
+out<<c.r<<"   "<<c.i <<"i"<<endl;
 }
 
 int main(){
